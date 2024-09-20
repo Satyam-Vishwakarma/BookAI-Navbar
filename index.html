@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Book Al</title>
+    <link rel="stylesheet" href="/Project/navbar-project.css">
+</head>
+<body>
+    <div class="header">
+        <nav class="logo">
+            <div class="logo-icon"></div>
+            <div class="img">
+                <img src="/Project/logo/logo.png" height="100%" alt="BookAI Logo">
+            </div>
+            <b>BookAI</b>
+        </nav>
+        <nav class="nav">
+            <a href="#" class="theme">Features</a>
+            <a href="#" class="theme">How It Works</a>
+            <a href="#" class="theme">Roadmap</a>
+            <a href="#" class="theme">API</a>
+            <a href="#" class="theme">Price</a>
+            <a href="#" class="theme">Models</a>
+            <a href="#">
+                <button>Login / Sign Up</button>
+            </a>
+        </nav>
+        <div class="toggle-element">
+            <input type="checkbox" name="checkbox" id="toggle">
+            <label for="toggle" class="switch">
+                <span class="span1">ON</span>
+                <span class="span2">OFF</span>
+            </label>
+        </div>
+    </div>
+
+    <!-- JavaScript part start -->
+    <script>
+        const toggleCheckbox = document.getElementById('toggle');
+        const header = document.querySelector('.header');
+        const logoText = document.querySelector('.logo b');
+
+        function changeTheme() {
+            if (toggleCheckbox.checked) {
+                header.classList.add('light-theme');
+                header.classList.remove('dark-theme');
+                logoText.style.color = '#000000'; 
+            } else {
+                header.classList.add('dark-theme');
+                header.classList.remove('light-theme');
+                logoText.style.color = '#ffffff'; 
+            }
+        }
+
+        toggleCheckbox.addEventListener('change', changeTheme);
+    </script>
+    <!-- JavaScript part end -->
+</body>
+</html>
